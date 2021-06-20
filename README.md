@@ -1,2 +1,5 @@
 # jeu-pendue-en-c
-bonjour voila mon petit projet en language c c est un simple jeu de console en c
+actually this project is simple hangman game ;
+just download the three files and make sure to put them all in the same folder
+then compile with any compiler (e.g codeblocks , dev c++)
+have fun! :)
