@@ -18,7 +18,7 @@ int main(){
             fichier=fopen("dico.txt","r");
             if(fichier!=NULL){
                 n=nbr_mot(fichier);
-                pos=rand()%n;
+                pos=rand()%n; // to get a random number in range 0 n-1
                 motsecret=getword(fichier,pos);
                 k=strlen(motsecret);
                 motactu=(char*)malloc(k*sizeof(char));
