@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+// we will know how much the character occures in our word
 int apparence(char* word, char c){
     int nmb_vue=0,i,k;
     k=strlen(word);
@@ -12,6 +12,7 @@ int apparence(char* word, char c){
     }
     return nmb_vue;
 }
+// this function is an alternative to scanf() in order to avoid the '\n' problem
 char lirecaractere(){
      char c;
      c=getchar();
@@ -20,7 +21,7 @@ char lirecaractere(){
      return c;
 
 }
-
+// here we will return an array of int that have the positions of the character
 int *indices(char *word,char c,int n){
     int *arr=(int*)malloc(n*sizeof(int)); // n will be the number of apparences of caracter in the word
     int i,k,j=0;
@@ -33,7 +34,7 @@ int *indices(char *word,char c,int n){
     }
     return arr;
 }
-
+// here we will change the actual word , so we will show the character that user had entred if they were right 
 void changeword(char *word,int *arr,char c){
     int i,j=0,k=strlen(word);
     for(i=0;i<k;i++){
@@ -43,6 +44,7 @@ void changeword(char *word,int *arr,char c){
         }
     }
 }
+// here i ll count how much word is in my dictionary
 int nbr_mot(FILE *flot){
     char c=fgetc(flot);
     int nombre_mots=0;
@@ -55,7 +57,7 @@ int nbr_mot(FILE *flot){
     rewind(flot);
     return nombre_mots;
 }
-
+// here i ll get the word that is in the postion that we will generate randomly
 char *getword(FILE *flot,int pos){
     char* mot=(char*)malloc(sizeof(char));
     char c=fgetc(flot);
